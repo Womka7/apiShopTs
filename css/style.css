@@ -23,6 +23,8 @@ main {
   height: auto;
 }
 
+
+
 .section-products {
   padding: 50px 0;
   width: 90%;
@@ -31,6 +33,7 @@ main {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
 .cart {
@@ -44,7 +47,22 @@ main {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
 }
+
+@keyframes reveal{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 .cart:hover{
   transform: scale(1.05);
